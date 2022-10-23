@@ -1,0 +1,11 @@
+.comments-container {
+  font-size: 0.8rem !important;
+}
+.comment-container {
+  padding: 20px 0;
+  border-top: 1px solid var(--secondary-text);
+}
+
+.comment-caption {
+  margin-left: 28px;
+}

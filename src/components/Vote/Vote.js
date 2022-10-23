@@ -24,8 +24,10 @@ export default function Vote({ voteUps }) {
   };
 
   const handleClickDown = ({ currentTarget }) => {
-    if (isVoteDown === false) {
+    if (isVoteUp === true) {
       setVoteValue((prev) => prev - 1);
+    }
+    if (isVoteDown === false) {
       setIsVoteUp(false);
       setIsVoteDown(true);
     }
