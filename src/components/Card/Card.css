@@ -1,0 +1,47 @@
+.card-container {
+  width: 450px;
+  height: 450px;
+  font-size: 1.1rem;
+  color: var(--primary-text);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 10fr 1fr;
+  row-gap: 5px;
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sender-container {
+  grid-row: 1 / 2;
+}
+
+.caption-container {
+  grid-row: 2 / 3;
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+.image-container {
+  grid-row: 3 / 4;
+  width: 100%;
+  object-fit: fill;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.bottom-bar {
+  grid-row: 4 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.comment-section:hover,
+.bookmark:hover {
+  color: var(--tertiary-bg);
+}
+
+.comment-section,
+.bookmark {
+  font-size: 1.1rem;
+}

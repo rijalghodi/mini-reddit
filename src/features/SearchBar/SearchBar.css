@@ -1,0 +1,32 @@
+.search-bar {
+  border-radius: 100px;
+  background-color: white;
+  border: 1px solid var(--primary-text);
+  padding: 0;
+  margin: 30px auto 50px auto;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.term-input {
+  font-size: 1.1rem;
+  border: none;
+  margin: 0 10px 0 20px;
+  padding: 8px;
+  flex: 1 1 auto;
+}
+
+.search-button:hover {
+  background-color: var(--secondary-bg);
+}
+
+.search-button {
+  flex: 0 0 50px;
+  margin: 0;
+  padding: 8px;
+  border-radius: 0 100px 100px 0;
+  border: none;
+  text-align: center;
+}

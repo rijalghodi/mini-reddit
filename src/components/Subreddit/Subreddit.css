@@ -1,0 +1,23 @@
+.subreddit-button:hover {
+  background-color: var(--tertiary-bg);
+  color: white;
+  cursor: pointer;
+}
+
+.subreddit-button {
+  background-color: var(--secondary-bg);
+  border-radius: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.subreddit-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 30px;
+}
