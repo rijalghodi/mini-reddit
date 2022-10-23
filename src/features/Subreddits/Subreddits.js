@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import "./Subreddits.css";
 import Subreddit from "../../components/Subreddit/Subreddit";
-import { fetchSubreddits, selectSubreddits } from "./subredditsSlice";
+import { selectSubreddits } from "./subredditsSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { getSubreddits } from "../../api/reddit";
 
 export default function Subreddits() {
   const dispatch = useDispatch();
-  const subreddits = useSelector(selectSubreddits);
+  const { subreddits } = useSelector(selectSubreddits);
 
   useEffect(() => {
-    dispatch(fetchSubreddits());
+    dispatch(getSubreddits());
   }, [dispatch]);
 
   return (
