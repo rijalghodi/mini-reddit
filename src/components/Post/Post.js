@@ -1,20 +1,21 @@
 import React from "react";
-import "./Card.css";
+import "./Post.css";
 import { BiComment } from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
 import { BsBookmark } from "react-icons/bs";
-import Vote from "../../components/Vote/Vote";
+import Vote from "../Vote/Vote";
 
-export default function Card() {
+export default function Post(props) {
+  const { post } = props;
   return (
-    <div className="card-container">
+    <div className="post-container">
       <div className="sender-container flex-standard">
         <VscAccount className="icon-style" />
-        <span>WishkeyPeak</span>
+        <span className="author-username">{post.author}</span>
       </div>
-      <div className="caption-container">wiwjsbd ffjfhf eueueueue wosbfsbdfisd sdgbsigbsg sdfbsidbgs ghdhndto digsibgs</div>
+      <article className="caption-container">{post.title}</article>
       <div className="image-container">
-        <img className="image-container" src="https://images.unsplash.com/photo-1592547097938-7942b22df3db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" />
+        <img src={post.url} alt="Post Image" className="post-image" />
       </div>
       <div className="bottom-bar">
         <button className="comment-section flex-standard">

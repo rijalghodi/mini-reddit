@@ -1,4 +1,4 @@
-.card-container {
+.post-container {
   width: 450px;
   height: 450px;
   font-size: 1.1rem;
@@ -24,9 +24,13 @@
 .image-container {
   grid-row: 3 / 4;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
   margin: 0 auto;
   border-radius: 3px;
+}
+
+.post-image {
+  overflow: hidden;
 }
 
 .bottom-bar {

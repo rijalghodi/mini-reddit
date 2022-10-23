@@ -2,16 +2,16 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const API_ROOT = "https://www.reddit.com";
 
-export const getSubredditPosts = async (subreddit) => {
-  const response = await fetch(`${API_ROOT}${subreddit}.json`);
-  const json = await response.json();
-
-  return json.data.children.map((post) => post.data);
-};
-
 const fetchUser = createAsyncThunk("users/fetchByIdStatus", async (user, thunkAPI) => {
   const response = await userAPI.fetchById(user.id);
   return response.data;
+});
+
+export const getSubredditPosts = createAsyncThunk("getSubredditPosts", async (subreddit) => {
+  const response = await fetch(`${API_ROOT}${subreddit}.json`);
+  const json = await response.json();
+  const data = json.data.children.map((post) => post.data);
+  return data;
 });
 
 export const getSubreddits = createAsyncThunk("getSubreddits", async () => {

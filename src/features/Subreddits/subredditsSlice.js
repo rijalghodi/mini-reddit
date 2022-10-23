@@ -5,30 +5,28 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 const subRedditSlice = createSlice({
   name: "subreddits",
   initialState: {
-    subreddits: {
-      subreddits: [],
-      error: false,
-      isLoading: false,
-    },
+    subreddits: [],
+    error: false,
+    isLoading: false,
   },
   reducers: {},
   extraReducers: {
     [getSubreddits.pending]: (state, action) => {
-      state.subreddits.isLoading = true;
-      state.subreddits.error = false;
+      state.isLoading = true;
+      state.error = false;
     },
     [getSubreddits.fulfilled]: (state, action) => {
-      state.subreddits.isLoading = false;
-      state.subreddits.error = false;
-      state.subreddits.subreddits = action.payload;
+      state.isLoading = false;
+      state.error = false;
+      state.subreddits = action.payload;
     },
     [getSubreddits.rejected]: (state, action) => {
-      state.subreddits.isLoading = false;
-      state.subreddits.error = true;
+      state.isLoading = false;
+      state.error = true;
     },
   },
 });
 
 export default subRedditSlice.reducer;
 
-export const selectSubreddits = (state) => state.subreddits.subreddits;
+export const selectSubreddits = (state) => state.subreddits;

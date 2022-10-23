@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "../components/Header/Header";
 import SearchBar from "../features/SearchBar/SearchBar";
-import Feeds from "../features/Feeds/Feeds";
+import Posts from "../features/Posts/Posts";
 import Subreddits from "../features/Subreddits/Subreddits";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       </header>
       <div className="main-container">
         <main>
-          <Feeds />
+          <Posts />
         </main>
         <aside>
           <Subreddits />
