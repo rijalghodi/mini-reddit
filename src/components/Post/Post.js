@@ -25,7 +25,7 @@ export default function Post(props) {
           <BiComment style={{ fontSize: "1.8rem" }} />
           32k
         </button>
-        <Vote />
+        <Vote voteUps={post.ups} />
         <button className="bookmark">
           <BsBookmark style={{ fontSize: "1.7rem" }} />
         </button>

@@ -5,7 +5,6 @@
 }
 
 .subreddit-button {
-  background-color: var(--secondary-bg);
   border-radius: 100px;
   padding: 10px;
   display: flex;

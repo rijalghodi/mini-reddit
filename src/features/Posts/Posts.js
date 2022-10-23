@@ -12,8 +12,6 @@ export default function Posts() {
 
   useEffect(() => {
     dispatch(getSubredditPosts(selectedSubreddit));
-    console.log(selectedSubreddit);
-    console.log(posts);
   }, [selectedSubreddit, dispatch]);
 
   return (

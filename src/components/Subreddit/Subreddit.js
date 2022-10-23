@@ -10,7 +10,7 @@ export default function Subreddit({ subreddit, onClick }) {
   };
   return (
     <button className="subreddit-button" onClick={handleClick}>
-      <img src={icon_img || DefaultIcon} alt={`${display_name}`} className="subreddit-icon" style={{ border: `3px solid ${primary_color}` }} />
+      <img src={icon_img || DefaultIcon} alt={`${display_name}`} className="subreddit-icon" style={{ border: `3px solid ${primary_color || "var(--tertiary-bg)"}` }} />
       <span>{display_name}</span>
     </button>
   );

@@ -5,10 +5,11 @@ const redditSlice = createSlice({
   name: "subredditPosts",
   initialState: {
     posts: [],
-    error: false,
-    isLoading: false,
     searchTerm: "",
     selectedSubreddit: "/r/home/",
+    voteNum: 0,
+    error: false,
+    isLoading: false,
   },
   reducers: {
     setPosts(state, action) {
@@ -21,6 +22,11 @@ const redditSlice = createSlice({
       state.selectedSubreddit = action.payload;
       state.searchTerm = "";
     },
+
+    setVoteNum(state, action) {
+      state.voteNum = action.payload;
+    },
+
     toggleShowingComments(state, action) {
       state.posts[action.payload].showingComments = !state.posts[action.payload].showingComments;
     },
@@ -76,10 +82,14 @@ export const fetchComments = (index, permalink) => async (dispatch) => {
   }
 };
 
+//////////////////////////////////////////////////////
+// Selectors
+
 export const selectSubredditPosts = (state) => state.subredditPosts;
 const selectPosts = (state) => state.reddit.posts;
 const selectSearchTerm = (state) => state.reddit.searchTerm;
 export const selectSelectedSubreddit = (state) => state.reddit.selectedSubreddit;
+export const selectVoteNum = (state) => state.subredditPosts.voteNum;
 
 export const selectFilteredPosts = createSelector([selectPosts, selectSearchTerm], (posts, searchTerm) => {
   if (searchTerm !== "") {
