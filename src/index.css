@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Raleway:wght@400;600;700&display=swap");
 
 :root {
-  --primary-text: #2b2b2b;
-  --secondary-text: #717070;
-  --primary-bg: #f3f3f3;
+  --primary-text: #420079;
+  --secondary-text: #9d5ed1;
+  --primary-bg: #f4edf4;
   --secondary-bg: #f3def3;
   --tertiary-bg: #bb00ff;
   font-size: 16px;
@@ -58,5 +58,5 @@ button {
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 }

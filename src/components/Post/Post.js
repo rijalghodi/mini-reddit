@@ -14,17 +14,20 @@ export default function Post(props) {
         <span className="author-username">{post.author}</span>
       </div>
       <article className="caption-container">{post.title}</article>
-      <div className="image-container">
-        <img src={post.url} alt="Post Image" className="post-image" />
-      </div>
+      {post.url.match(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/) && (
+        <div className="image-container">
+          <img src={post.url} alt="Post Image" className="post-image" />
+        </div>
+      )}
+
       <div className="bottom-bar">
         <button className="comment-section flex-standard">
-          <BiComment />
+          <BiComment style={{ fontSize: "1.8rem" }} />
           32k
         </button>
         <Vote />
         <button className="bookmark">
-          <BsBookmark />
+          <BsBookmark style={{ fontSize: "1.7rem" }} />
         </button>
       </div>
     </div>

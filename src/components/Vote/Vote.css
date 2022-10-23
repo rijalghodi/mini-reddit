@@ -8,10 +8,10 @@
 }
 
 .vote-container button {
-  border: 1px solid var(--primary-text);
+  border: 2px solid var(--secondary-text);
   width: auto;
-  color: var(--primary-text);
-  font-size: 1.1rem;
+  color: var(--secondary-text);
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@
 .up {
   border-radius: 100px 0 0 100px;
   border-right: none !important;
-  padding: 4px 12px 4px 16px !important;
+  padding: 5px 12px 5px 16px !important;
 }
 
 .down:hover {
@@ -33,5 +33,5 @@
 
 .down {
   border-radius: 0px 100px 100px 0;
-  padding: 4px 16px 4px 12px !important;
+  padding: 5px 16px 5px 12px !important;
 }

@@ -1,43 +1,45 @@
 .post-container {
   width: 450px;
-  height: 450px;
+  height: auto;
+  margin-bottom: 30px;
   font-size: 1.1rem;
   color: var(--primary-text);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 10fr 1fr;
-  row-gap: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
   padding: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1), 0 10px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .sender-container {
-  grid-row: 1 / 2;
 }
 
 .caption-container {
-  grid-row: 2 / 3;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   overflow: hidden;
 }
 
 .image-container {
-  grid-row: 3 / 4;
   width: 100%;
-  object-fit: cover;
   margin: 0 auto;
-  border-radius: 3px;
 }
 
 .post-image {
   overflow: hidden;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .bottom-bar {
-  grid-row: 4 / 5;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  color: var(--secondary-text);
 }
 
 .comment-section:hover,
@@ -47,5 +49,5 @@
 
 .comment-section,
 .bookmark {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
