@@ -33,11 +33,11 @@ export default function Vote({ voteUps }) {
 
   return (
     <div className="vote-container">
-      <button className="up flex-standard" onClick={handleClickUp}>
+      <button className="up flex-standard" onClick={handleClickUp} aria-label="Up vote">
         {isVoteUp === true ? <GoArrowUp style={{ fontSize: "1.5rem" }} /> : <TbArrowBigTop />}
         <span>{voteValue}</span>
       </button>
-      <button className="down" onClick={handleClickDown}>
+      <button className="down" onClick={handleClickDown} aria-label="Down vote">
         {isVoteDown === true ? <GoArrowDown style={{ fontSize: "1.5rem" }} /> : <TbArrowBigDown />}
       </button>
     </div>
