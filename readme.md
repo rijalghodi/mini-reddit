@@ -27,8 +27,8 @@ For those who want to see the project boilerplate in the local computer, do thes
 
 1. Download this repository
 2. Install all the package that listed in requirements section
-   For dependecies package, run `npm install <package-name>`
-   For devDependencies package, run `npm install <package-name> --save-dev`
+   - For dependecies package, run `npm install <package-name>`
+   - For devDependencies package, run `npm install <package-name> --save-dev`
 3. Build the project `npm run build`
 4. Run the project `npm start`
 5. See the project on `https://localhost:3000`
