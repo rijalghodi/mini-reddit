@@ -21,8 +21,8 @@ export default function Post({ post }) {
 
   return (
     <div className="post-container">
-      <div className="sender-container flex-standard">
-        <VscAccount className="icon-style" />
+      <div className="sender-container">
+        {/* <VscAccount className="icon-style" /> */}
         <span className="author-username">{post.author}</span>
       </div>
       <article className="caption-container">{post.title}</article>
