@@ -6,10 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSubreddits } from "../../api/reddit";
 import { setSelectedSubreddit } from "../Posts/postsSlice";
 import { GrClose } from "react-icons/gr";
+import SubredditLoading from "../../components/Subreddit/SubredditLoading";
 
 export default function Subreddits() {
   const dispatch = useDispatch();
-  const { subreddits } = useSelector(selectSubreddits);
+  const { subreddits, isLoading, error } = useSelector(selectSubreddits);
 
   const onClickedSubreddit = (subreddit) => dispatch(setSelectedSubreddit(subreddit));
 
@@ -21,6 +22,15 @@ export default function Subreddits() {
     const subredditContainer = document.getElementById("subreddits-container");
     subredditContainer.classList.add("hidden");
   };
+
+  if (isLoading) {
+    return (
+      <div id="subreddits-container" className="subreddits-container hidden">
+        <h2>Subreddits</h2>
+        <ul className="subreddits-list">Loading ...</ul>
+      </div>
+    );
+  }
 
   return (
     <div id="subreddits-container" className="subreddits-container hidden">
