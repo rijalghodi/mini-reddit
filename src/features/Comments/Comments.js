@@ -12,13 +12,12 @@ export default function Comments({ permalink, postId }) {
   const selectedSubreddit = useSelector(selectSelectedSubreddit);
   const comments = postComments[`${postId}`];
 
+  // get the comments from API if permalink updated
   useEffect(() => {
     dispatch(getComments(permalink));
-    console.log("comments:");
-    console.log(postComments);
-    console.log("---------------------");
   }, [permalink, dispatch]);
 
+  // remove all comments if user select the other subreddit
   useEffect(() => {
     dispatch(removeAllComments());
   }, [selectedSubreddit]);
