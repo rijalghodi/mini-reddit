@@ -4,4 +4,4 @@ Final Project on Codecademy Course
 
 ## How to Run
 
-[@rijalghodi](https://github.com/rijalghodi)
+Click [this link](https://mini-reddit-rijalghodi.netlify.app/)
