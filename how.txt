@@ -1,0 +1,22 @@
+Comments.js dispatch getComments-> 
+   getComments refer to commentsSlice.js ->  
+      commentsSlice.js call thunk getComments in reddit.js
+         getComments fetch data from API_ROOT/${permalink}.json -> 
+            return [{..., parent_id: "000"}, {..., parent_id: "000"}] 
+      if thunk success, update the comments state by [..., {action.payload[0].parent_id: action.payload}]
+   select comments from store by useSelect(state => state.comments.comments[`${postId}`]);
+
+
+
+Posts.js dispatch getSubredditPosts ->
+   getSubredditPost refer to postsSlice.js ->
+      postSlice.js invoke thunk getSubredditPost in reddit.js ->
+         getSubredditPost fetch data dari API_ROOT/${subreddit}.json
+            fetch me-return [{..., name: "000"}, {..., name: "111"}]
+         if getSubredditPost fulfilled
+            update the post state by [action.payload]
+   
+   give props to Post.js
+      Post.js take the props.name and pass it to Comments.js as postId
+
+

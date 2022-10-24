@@ -17,7 +17,7 @@ export const getSubreddits = createAsyncThunk("getSubreddits", async () => {
 });
 
 export const getComments = createAsyncThunk("getComments", async (permalink) => {
-  const response = await fetch(`${API_ROOT}${permalink}.json`);
+  const response = await fetch(`${API_ROOT}${permalink.slice(0, -1)}.json`);
   const json = await response.json();
-  return json[1].data.children.map((subreddit) => subreddit.data);
+  return json[1].data.children.map((comment) => comment.data);
 });

@@ -9,8 +9,8 @@ import Comments from "../../features/Comments/Comments";
 export default function Post({ post }) {
   const [showComments, setShowComments] = useState(false);
 
-  const handleCommentsClick = () => {
-    setShowComments(true);
+  const handleCommentButtonClick = () => {
+    showComments ? setShowComments(false) : setShowComments(true);
   };
 
   return (
@@ -26,7 +26,7 @@ export default function Post({ post }) {
         </div>
       )}
       <div className="bottom-bar">
-        <button className="comment-section flex-standard" onClick={handleCommentsClick}>
+        <button className="comment-section flex-standard" onClick={handleCommentButtonClick}>
           <BiComment style={{ fontSize: "1.8rem" }} />
           32k
         </button>
@@ -35,7 +35,7 @@ export default function Post({ post }) {
           <BsBookmark style={{ fontSize: "1.7rem" }} />
         </button>
       </div>
-      {showComments && <Comments permalink={post.permalink} />}
+      {showComments && <Comments permalink={post.permalink} postId={post.name} />}
     </div>
   );
 }
