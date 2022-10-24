@@ -1,5 +1,7 @@
-# React - Webpack
+# Mini Reddit
 
-This is my code starter to create react app with webpack modules bundler
+Final Project on Codecademy Course
+
+## How to Run
 
 [@rijalghodi](https://github.com/rijalghodi)
