@@ -12,7 +12,7 @@ export default function Subreddits() {
   const dispatch = useDispatch();
   const { subreddits, isLoading, error } = useSelector(selectSubreddits);
 
-  const onClickedSubreddit = (subreddit) => dispatch(setSelectedSubreddit(subreddit));
+  const onClickSubreddit = (subreddit) => dispatch(setSelectedSubreddit(subreddit));
 
   useEffect(() => {
     dispatch(getSubreddits());
@@ -42,7 +42,7 @@ export default function Subreddits() {
         {subreddits.map((subreddit) => {
           return (
             <li key={subreddit.id}>
-              <Subreddit subreddit={subreddit} onClick={onClickedSubreddit} />
+              <Subreddit subreddit={subreddit} onClickSubreddit={onClickSubreddit} />
             </li>
           );
         })}

@@ -2,11 +2,11 @@ import React from "react";
 import "./Subreddit.css";
 import DefaultIcon from "../../assets/image/logo.png";
 
-export default function Subreddit({ subreddit, onClick }) {
+export default function Subreddit({ subreddit, onClickSubreddit }) {
   const { display_name, icon_img, primary_color } = subreddit;
 
   const handleClick = () => {
-    onClick(subreddit.url);
+    onClickSubreddit(subreddit.url);
   };
   return (
     <button className="subreddit-button" onClick={handleClick}>
