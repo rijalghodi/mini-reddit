@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SearchBar.css";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { setSearchTerm } from "../Posts/postsSlice";
+import { setSearchTerm } from "../../features/Posts/postsSlice";
 
 export default function SearchBar() {
   const dispatch = useDispatch();

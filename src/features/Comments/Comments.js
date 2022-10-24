@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getComments } from "../../api/reddit";
 import { removeAllComments, selectComments } from "./CommentsSlice";
-import { VscAccount } from "react-icons/vsc";
+
 import "./Comments.css";
 import { selectSelectedSubreddit } from "../Posts/postsSlice";
+import Comment from "../../components/Comment/Comment";
 
 export default function Comments({ permalink, postId }) {
   const dispatch = useDispatch();
@@ -22,18 +23,5 @@ export default function Comments({ permalink, postId }) {
     dispatch(removeAllComments());
   }, [selectedSubreddit]);
 
-  return (
-    <ul className="comments-container">
-      {comments &&
-        comments.slice(0, 5).map((comment) => (
-          <li key={comment.id} className="comment-container">
-            <div className="sender-container flex-standard">
-              <VscAccount className="icon-style" />
-              <span className="comment-author">{comment.author}</span>
-            </div>
-            <article className="comment-caption">{comment.body}</article>
-          </li>
-        ))}
-    </ul>
-  );
+  return <ul className="comments-container">{comments && comments.slice(0, 5).map((comment) => <Comment key={comment.id} comment={comment} />)}</ul>;
 }

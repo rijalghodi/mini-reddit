@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-
-import { ImArrowUp, ImArrowDown } from "react-icons/im";
-import { FaArrowDown } from "react-icons/fa";
 import { TbArrowBigTop, TbArrowBigDown } from "react-icons/tb";
-
 import { GoArrowDown, GoArrowUp } from "react-icons/go";
-
-import { TiArrowUpOutline, TiArrowDownOutline, TiArrowUpThick, TiArrowDownThick } from "react-icons/ti";
-
 import "./Vote.css";
+import shortenNumber from "../../util/shortenNumber";
 
 export default function Vote({ voteUps }) {
   const [voteValue, setVoteValue] = useState(voteUps);
@@ -37,7 +31,7 @@ export default function Vote({ voteUps }) {
     <div className="vote-container">
       <button className="up flex-standard" onClick={handleClickUp} aria-label="Up vote">
         {isVoteUp === true ? <GoArrowUp style={{ fontSize: "1.5rem" }} /> : <TbArrowBigTop />}
-        <span>{voteValue}</span>
+        <span>{shortenNumber(voteValue, 1)}</span>
       </button>
       <button className="down" onClick={handleClickDown} aria-label="Down vote">
         {isVoteDown === true ? <GoArrowDown style={{ fontSize: "1.5rem" }} /> : <TbArrowBigDown />}

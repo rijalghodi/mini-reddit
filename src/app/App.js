@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Header from "../components/Header/Header";
-import SearchBar from "../features/SearchBar/SearchBar";
+import SearchBar from "../components/SearchBar/SearchBar";
 import Posts from "../features/Posts/Posts";
 import Subreddits from "../features/Subreddits/Subreddits";
 
