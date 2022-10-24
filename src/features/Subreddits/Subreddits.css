@@ -36,7 +36,7 @@ li {
 }
 
 .hidden {
-  display: none;
+  display: block;
 }
 
 @media only screen and (max-width: 870px) {
@@ -63,5 +63,9 @@ li {
 
   .minimize {
     display: block;
+  }
+
+  .hidden {
+    display: none;
   }
 }
