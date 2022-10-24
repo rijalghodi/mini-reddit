@@ -5,6 +5,7 @@ import { selectSubreddits } from "./subredditsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { getSubreddits } from "../../api/reddit";
 import { setSelectedSubreddit } from "../Posts/postsSlice";
+import { GrClose } from "react-icons/gr";
 
 export default function Subreddits() {
   const dispatch = useDispatch();
@@ -16,8 +17,16 @@ export default function Subreddits() {
     dispatch(getSubreddits());
   }, [dispatch]);
 
+  const handleClickMinimize = () => {
+    const subredditContainer = document.getElementById("subreddits-container");
+    subredditContainer.classList.add("hidden");
+  };
+
   return (
-    <div className="subreddits-container">
+    <div id="subreddits-container" className="subreddits-container hidden">
+      <button className="minimize" onClick={handleClickMinimize}>
+        <GrClose />
+      </button>
       <h2>Subreddits</h2>
       <ul className="subreddits-list">
         {subreddits.map((subreddit) => {

@@ -4,7 +4,7 @@
   border: 1px solid var(--primary-text);
   padding: 0;
   margin: 30px auto 50px auto;
-  width: 50%;
+  width: 580px;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -16,6 +16,18 @@
   margin: 0 10px 0 20px;
   padding: 8px;
   flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 676px) {
+  .search-bar {
+    margin: 0px auto 20px auto;
+    width: 430px;
+    height: 35px;
+  }
+
+  .term-input {
+    font-size: 0.9rem;
+  }
 }
 
 .search-button:hover {

@@ -4,3 +4,15 @@
   align-items: flex-start;
   gap: 30px;
 }
+
+@media only screen and (max-width: 870px) {
+  .main-container {
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 676px) {
+  .main-container {
+    gap: 0;
+  }
+}

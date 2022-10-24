@@ -1,8 +1,9 @@
 .header-bg {
   /* background-color: var(--secondary-bg); */
+  /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2); */
   padding: 20px;
   width: 100%;
-  /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2); */
+  display: flex;
 }
 
 .identity {
@@ -11,6 +12,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 h1 {
@@ -21,4 +23,23 @@ h1 {
 img {
   width: 50px;
   height: auto;
+}
+
+.subreddit-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 1.6rem;
+  color: var(--primary-text);
+}
+
+@media only screen and (max-width: 676px) {
+  .header-bg {
+    padding: 15px;
+  }
+
+  .subreddit-menu {
+    display: block;
+  }
 }

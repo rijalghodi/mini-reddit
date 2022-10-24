@@ -14,6 +14,25 @@
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (max-width: 870px) {
+  .post-container {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    width: 350px;
+    padding: 25px;
+  }
+}
+
+@media only screen and (max-width: 676px) {
+  .post-container {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    width: 480px;
+    padding: 45px;
+    box-sizing: border-box;
+  }
+}
+
 .author-username {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -21,7 +40,6 @@
 
 .caption-container {
   font-size: 1.4rem;
-  overflow: hidden;
 }
 
 .image-container {
@@ -30,7 +48,6 @@
 }
 
 .post-image {
-  overflow: hidden;
   border-radius: 10px;
   object-fit: cover;
   width: 100%;
@@ -51,5 +68,32 @@
 
 .comment-section,
 .bookmark {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
   font-size: 1.15rem;
+}
+
+.bottom-bar-icon {
+  font-size: 1.75rem;
+}
+
+@media only screen and (max-width: 870px) {
+  .author-username {
+    font-size: 1rem;
+  }
+
+  .caption-container {
+    font-size: 1.1rem;
+  }
+
+  .comment-section,
+  .bookmark {
+    font-size: 1rem;
+  }
+
+  .bottom-bar-icon {
+    font-size: 1.5rem;
+  }
 }
