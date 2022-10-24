@@ -6,7 +6,7 @@ import { BiMenu } from "react-icons/bi";
 export default function Header() {
   const handleClickMenu = () => {
     const subredditContainer = document.getElementById("subreddits-container");
-    subredditContainer.style.display = "block";
+    subredditContainer.classList.remove("hidden");
   };
   return (
     <div className="header-bg">

@@ -19,11 +19,11 @@ export default function Subreddits() {
 
   const handleClickMinimize = () => {
     const subredditContainer = document.getElementById("subreddits-container");
-    subredditContainer.style.display = "none";
+    subredditContainer.classList.add("hidden");
   };
 
   return (
-    <div id="subreddits-container" className="subreddits-container">
+    <div id="subreddits-container" className="subreddits-container hidden">
       <button className="minimize" onClick={handleClickMinimize}>
         <GrClose />
       </button>
