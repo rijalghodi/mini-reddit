@@ -60,6 +60,14 @@ li {
     overflow-y: scroll;
   }
 
+  @media only screen and (max-width: 490px) {
+    .subreddits-container {
+      margin-bottom: 15px;
+      width: 100vw;
+      padding: 15px;
+    }
+  }
+
   .minimize {
     display: block;
   }

@@ -27,9 +27,17 @@
   .post-container {
     margin-bottom: 20px;
     font-size: 0.8rem;
-    width: 480px;
-    padding: 45px;
+    width: 460px;
+    padding: 30px;
     box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .post-container {
+    margin-bottom: 15px;
+    width: 340px;
+    padding: 14px;
   }
 }
 

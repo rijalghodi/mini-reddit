@@ -18,18 +18,6 @@
   flex: 1 1 auto;
 }
 
-@media only screen and (max-width: 676px) {
-  .search-bar {
-    margin: 0px auto 20px auto;
-    width: 430px;
-    height: 35px;
-  }
-
-  .term-input {
-    font-size: 0.9rem;
-  }
-}
-
 .search-button:hover {
   background-color: var(--secondary-bg);
 }
@@ -41,4 +29,31 @@
   border-radius: 0 100px 100px 0;
   border: none;
   text-align: center;
+}
+
+@media only screen and (max-width: 676px) {
+  .search-bar {
+    margin: 0px auto 20px auto;
+    width: 430px;
+    height: 35px;
+  }
+
+  .search-button {
+    flex: 0 0 35px;
+  }
+
+  .term-input {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .search-bar {
+    margin: 0px auto 20px auto;
+    width: 320px;
+    height: 30px;
+  }
+  .search-button {
+    flex: 0 0 30px;
+  }
 }

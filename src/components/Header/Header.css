@@ -43,3 +43,13 @@ img {
     display: block;
   }
 }
+
+@media only screen and (max-width: 490px) {
+  .identity {
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  .header-bg {
+    padding-left: 25px;
+  }
+}
