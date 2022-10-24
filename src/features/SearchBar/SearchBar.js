@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
+import { FaSearch } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { setSearchTerm } from "../Posts/postsSlice";
 
 export default function SearchBar() {
+  const dispatch = useDispatch();
+  const [localSearchTerm, setLocalSearchTerm] = useState("");
+
+  const handleChange = ({ target }) => {
+    setLocalSearchTerm(target.value);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(setSearchTerm(localSearchTerm));
+    setLocalSearchTerm("");
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="search-bar">
-        <input id="term-input" className="term-input" />
+        <input id="term-input" className="term-input" onChange={handleChange} value={localSearchTerm} />
         <button className="search-button">
-          <i className="fa-solid fa-magnifying-glass"></i>
+          <FaSearch />
         </button>
       </div>
     </form>
