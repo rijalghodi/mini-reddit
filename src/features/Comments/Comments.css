@@ -6,6 +6,11 @@
   border-top: 1px solid var(--secondary-text);
 }
 
+.comment-author {
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
 .comment-caption {
   margin-left: 28px;
 }
