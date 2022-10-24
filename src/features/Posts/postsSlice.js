@@ -6,7 +6,7 @@ const redditSlice = createSlice({
   initialState: {
     posts: [],
     searchTerm: "",
-    selectedSubreddit: "/r/funny/",
+    selectedSubreddit: "/r/home/",
     voteNum: 0,
     error: false,
     isLoading: false,
