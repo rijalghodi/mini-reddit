@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import moment from "moment";
 import "./Post.css";
 import { BiComment, BiCommentDetail } from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
@@ -21,9 +22,11 @@ export default function Post({ post }) {
 
   return (
     <div className="post-container">
-      <div className="sender-container">
+      <div className="sender-container flex-standard">
         {/* <VscAccount className="icon-style" /> */}
         <span className="author-username">{post.author}</span>
+        <span>.</span>
+        <span>{moment.unix(post.created_utc).fromNow()}</span>
       </div>
       <article className="caption-container">{post.title}</article>
       {post.url.match(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/) && (
